@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;0,900;1,100;1,300;1,400&display=swap");
+
+$defaultRadius: 25px;
+$bgPrimary: #719191;
+$searchBg: #eaf1f1;
+
+body {
+  font-family: "Roboto", sans-serif;
+  .app {
+    width: 100%;
+    height: 100%;
+    background-color: $bgPrimary;
+    display: flex;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 90px;
+  padding: 15px 20px;
+}
+.main-content {
+  width: calc(100% - 90px);
+  background-color: #fff;
+  border-top-left-radius: $defaultRadius;
+  border-bottom-left-radius: $defaultRadius;
+  padding-top: 20px;
+  padding-left: 50px;
+  .right-side {
+    background-color: $searchBg;
+    width: 100%;
+    height: 100%;
+  }
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  .left-side {
+    display: flex;
+    width: 80%;
+    h3 {
+      color: #364a4a;
+      font-weight: bold;
+      font-size: 1.8rem;
+      margin-right: 30px;
+    }
+  }
+}
+.global-search {
+  min-width: 400px;
+  .custom-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .MuiTextField-root {
+      width: 100%;
+      .css-ij9k62-MuiInputBase-root-MuiOutlinedInput-root {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      input {
+        padding: 8px 20px;
+        background-color: $searchBg;
+      }
+    }
+    .lucide {
+      position: absolute;
+      right: 8px;
+      color: $bgPrimary;
+      height: 20px;
+    }
+  }
+}
