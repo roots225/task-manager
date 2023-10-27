@@ -20,6 +20,19 @@ body {
   min-height: 100%;
   width: 90px;
   padding: 15px 20px;
+  justify-content: space-between;
+  .menus {
+    ul {
+      li {
+        padding: 20px 10px;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 }
 .main-content {
   width: calc(100% - 90px);
